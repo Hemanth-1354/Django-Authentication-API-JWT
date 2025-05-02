@@ -18,3 +18,10 @@ class MyTokenObtainPairSerializer(TokenObtainPairSerializer):
         token = super().get_token(user)
         token['username'] = user.username
         return token
+
+class PasswordResetRequestSerializer(serializers.Serializer):
+    username = serializers.CharField()
+
+class PasswordResetConfirmSerializer(serializers.Serializer):
+    token = serializers.CharField()
+    new_password = serializers.CharField(min_length=8)

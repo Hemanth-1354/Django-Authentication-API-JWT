@@ -1,9 +1,11 @@
+###
+
 POST http://127.0.0.1:8000/api/login/
 Content-Type: application/json
 
 {
     "username": "Varsh",
-    "password": "Varsh@123"
+    "password": "Varshini@2005"
 }
 ###
 POST  http://127.0.0.1:8000/api/register/
@@ -22,7 +24,7 @@ Content-Type: application/json
 }
 ###
 GET http://127.0.0.1:8000/api/profile/
-Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNzQ2MTIyNzk0LCJpYXQiOjE3NDYxMjI0OTQsImp0aSI6ImNlZGJlOWM2NDk0ZTRmNmZiODI1YjZlMzliZGUxYmI4IiwidXNlcl9pZCI6NywidXNlcm5hbWUiOiJWYXJzaCJ9.fvD7N7bLrEbm06HPg-0SLFp9l-uDvztKz1msMFiKaAQ
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNzQ2MTU3NjYzLCJpYXQiOjE3NDYxNTczNjMsImp0aSI6IjE4ZDdjNmFlZjQ3NjRlZDhhMThhOTNmMmI2ZmUzNWM1IiwidXNlcl9pZCI6NywidXNlcm5hbWUiOiJWYXJzaCJ9.UPHwxgTvSY1PfFb6Cyo2z1miorwEdFF-t6yhRHi9kwQ
 
 ###
 POST http://127.0.0.1:8000/api/logout/
@@ -31,4 +33,23 @@ Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90eXBlIjoiY
 
 {
     "refresh": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90eXBlIjoicmVmcmVzaCIsImV4cCI6MTc0NjIwODk1NywiaWF0IjoxNzQ2MTIyNTU3LCJqdGkiOiJiYjMwYjZhMzRmYzY0ZTA0ODBhMDgyZmI5MzZmMDRhNiIsInVzZXJfaWQiOjcsInVzZXJuYW1lIjoiVmFyc2gifQ.vsQz2wmzdzWiG32dTxbMshSIOpHXQQidmPoND0LZjGA"
+}
+
+###
+
+POST http://localhost:8000/api/password-reset/
+Content-Type: application/json
+
+{
+  "username": "Varsh"
+}
+
+###
+
+POST http://localhost:8000/api/password-reset-confirm/
+Content-Type: application/json
+
+{
+  "token": "WVBOmhrBBMURk6NBTF3Oee39fvEVtAKm2Llcs2ZfmT8cIvMs",
+  "new_password": "Varshini@2005"
 }
