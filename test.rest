@@ -4,35 +4,36 @@ POST http://127.0.0.1:8000/api/login/
 Content-Type: application/json
 
 {
-    "username": "Varsh",
-    "password": "Varshini@2005"
+    "username": "Walter",
+    "password": "Walter@123"
 }
 ###
 POST  http://127.0.0.1:8000/api/register/
 Content-Type: application/json
 
 {
-    "username": "Varsh",
-    "password": "Varsh@123"
+    "username": "Walter",
+    "password": "Walter@123"
 }
 ###
 POST http://127.0.0.1:8000/api/refresh/
 Content-Type: application/json
 
 {
-    "refresh": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90eXBlIjoicmVmcmVzaCIsImV4cCI6MTc0NjIwODgyNCwiaWF0IjoxNzQ2MTIyNDI0LCJqdGkiOiIwYzA4MGZkNWE3NTg0OGFjYjM1ZDY5ODEwY2QxN2YyNiIsInVzZXJfaWQiOjcsInVzZXJuYW1lIjoiVmFyc2gifQ.HOQreJADpUa2zr32fBly6aMigbyb2fj45IF9etNIKHI"
+    "refresh": "YOUR_REFRESH_TOKEN"
 }
+
 ###
 GET http://127.0.0.1:8000/api/profile/
-Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNzQ2MTU3NjYzLCJpYXQiOjE3NDYxNTczNjMsImp0aSI6IjE4ZDdjNmFlZjQ3NjRlZDhhMThhOTNmMmI2ZmUzNWM1IiwidXNlcl9pZCI6NywidXNlcm5hbWUiOiJWYXJzaCJ9.UPHwxgTvSY1PfFb6Cyo2z1miorwEdFF-t6yhRHi9kwQ
+Authorization: Bearer <YOUR_ACCESS_TOKEN>
 
 ###
 POST http://127.0.0.1:8000/api/logout/
 Content-Type: application/json
-Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNzQ2MTIyNzk0LCJpYXQiOjE3NDYxMjI0OTQsImp0aSI6ImNlZGJlOWM2NDk0ZTRmNmZiODI1YjZlMzliZGUxYmI4IiwidXNlcl9pZCI6NywidXNlcm5hbWUiOiJWYXJzaCJ9.fvD7N7bLrEbm06HPg-0SLFp9l-uDvztKz1msMFiKaAQ
+Authorization: Bearer <YOUR_ACCESS_TOKEN>
 
 {
-    "refresh": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90eXBlIjoicmVmcmVzaCIsImV4cCI6MTc0NjIwODk1NywiaWF0IjoxNzQ2MTIyNTU3LCJqdGkiOiJiYjMwYjZhMzRmYzY0ZTA0ODBhMDgyZmI5MzZmMDRhNiIsInVzZXJfaWQiOjcsInVzZXJuYW1lIjoiVmFyc2gifQ.vsQz2wmzdzWiG32dTxbMshSIOpHXQQidmPoND0LZjGA"
+    "refresh": "YOUR_REFRESH_TOKEN"
 }
 
 ###
@@ -41,7 +42,7 @@ POST http://localhost:8000/api/password-reset/
 Content-Type: application/json
 
 {
-  "username": "Varsh"
+  "username": "Walter"
 }
 
 ###
@@ -50,6 +51,6 @@ POST http://localhost:8000/api/password-reset-confirm/
 Content-Type: application/json
 
 {
-  "token": "WVBOmhrBBMURk6NBTF3Oee39fvEVtAKm2Llcs2ZfmT8cIvMs",
-  "new_password": "Varshini@2005"
+  "token": "RESET_TOKEN",
+  "new_password": "Walter@2005"
 }
